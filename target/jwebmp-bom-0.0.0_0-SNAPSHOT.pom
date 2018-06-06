@@ -65,7 +65,7 @@
         <uadetector.core.version>0.9.22</uadetector.core.version>
         <uadetector.json.version>0.1.22</uadetector.json.version>
         <uadetector.detector.version>2014.10</uadetector.detector.version>
-        <sl4j.version>1.7.5</sl4j.version>
+        <sl4j.version>1.7.25</sl4j.version>
 
         <commons.lang3>3.5</commons.lang3>
         <commons.io>2.5</commons.io>
@@ -77,17 +77,6 @@
 
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
         <sonar.exclusions>**bower_components</sonar.exclusions>
-
-        <undertow.version>1.4.21.Final</undertow.version>
-        <hazelcast.version>3.9.1</hazelcast.version>
-
-
-        <m2e.jsf.activation>false</m2e.jsf.activation>
-        <m2e.jpa.activation>false</m2e.jpa.activation>
-        <m2e.cdi.activation>false</m2e.cdi.activation>
-        <m2e.jaxrs.activation>false</m2e.jaxrs.activation>
-
-
     </properties>
 
     <dependencyManagement>
