@@ -553,7 +553,6 @@
             <url>https://jwebmp.com/artifactory/libs-release-local</url>
         </repository>
     </distributionManagement>
-
     <organization>
         <name>Marc Magon</name>
         <url>http://jwebmp.com</url>
