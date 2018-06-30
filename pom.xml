@@ -34,6 +34,7 @@
         <maven.resources.version>3.0.2</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
+        <lombok.version>1.18.0</lombok.version>
 
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
@@ -99,6 +100,13 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <dependency>
                 <groupId>io.github.lukehutch</groupId>
@@ -674,6 +682,9 @@
             <activation>
                 <jdk>10</jdk>
             </activation>
+            <properties>
+                <jar.classifier>jre10</jar.classifier>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
