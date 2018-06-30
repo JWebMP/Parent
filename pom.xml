@@ -16,6 +16,11 @@
             <name>JWebMPArtifactory-snapshots</name>
             <url>https://jwebmp.com/artifactory/libs-snapshot</url>
         </repository>
+        <repository>
+            <id>jwebmp-release</id>
+            <name>JWebMPArtifactory-release</name>
+            <url>https://jwebmp.com/artifactory/libs-release</url>
+        </repository>
     </repositories>
 
     <properties>
@@ -28,12 +33,13 @@
         <maven.source.version>2.1.2</maven.source.version>
         <maven.resources.version>3.0.2</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
+        <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
 
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.5</jackson.version>
-        <fastclasspath.version>2.18.1</fastclasspath.version>
+        <fastclasspath.version>3.1.6</fastclasspath.version>
         <guice.version>4.2.0</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -87,6 +93,7 @@
         <m2e.cdi.activation>false</m2e.cdi.activation>
         <m2e.jaxrs.activation>false</m2e.jaxrs.activation>
 
+        <nexus.staging.maven.plugin.version>1.6.3</nexus.staging.maven.plugin.version>
 
     </properties>
 
@@ -322,12 +329,6 @@
                 <type>jar</type>
             </dependency>
 
-            <!--     <dependency>
-                     <groupId>org.hibernate.javax.persistence</groupId>
-                     <artifactId>hibernate-jpa-2.1-api</artifactId>
-                     <version>${jpa21.version}</version>
-                     <type>jar</type>
-                 </dependency>-->
 
             <dependency>
                 <groupId>net.sf.qualitycheck</groupId>
@@ -461,7 +462,6 @@
     </dependencyManagement>
 
     <build>
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -509,10 +509,10 @@
                 <!-- This plugin doesn't work inside pluginManagement, for some reason -->
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.3</version>
+                <version>${nexus.staging.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
+                    <serverId>sonar-snapshot</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
@@ -541,18 +541,6 @@
         </license>
     </licenses>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshot</id>
-            <name>JWebMPArtifactory-snapshots</name>
-            <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-        <repository>
-            <id>central</id>
-            <name>JWebMPArtifactory-releases</name>
-            <url>https://jwebmp.com/artifactory/libs-release-local</url>
-        </repository>
-    </distributionManagement>
     <organization>
         <name>Marc Magon</name>
         <url>http://jwebmp.com</url>
@@ -560,7 +548,6 @@
 
     <scm>
         <url>https://github.com/GedMarc?tab=repositories</url>
-        <developerConnection>Marc Magon</developerConnection>
     </scm>
 
     <developers>
@@ -573,8 +560,8 @@
     </developers>
 
     <issueManagement>
-        <system>Github</system>
-        <url>https://github.com/GedMarc/JWebMP-Bom/issues</url>
+        <system>Jira</system>
+        <url>https://www.jwebmp.com/jira</url>
     </issueManagement>
 
     <ciManagement>
@@ -601,30 +588,123 @@
 
     <profiles>
         <profile>
-            <id>release</id>
+            <id>jwebmp-distribution</id>
             <activation>
                 <property>
                     <name>performRelease</name>
                     <value>true</value>
                 </property>
             </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>jwebmp-snapshot</id>
+                    <name>JWebMPArtifactory-snapshots</name>
+                    <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
+                </snapshotRepository>
+                <repository>
+                    <id>jwebmp-release</id>
+                    <name>JWebMPArtifactory-releases</name>
+                    <url>https://jwebmp.com/artifactory/libs-release-local</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>sonartype-distribution</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonar-snapshot</id>
+                    <name>SonarType-snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonar-release</id>
+                    <name>SonarType-releases</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>jdk8</id>
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>${build.helper.maven.plugin.version}</version>
                         <executions>
                             <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
+                                <id>add-source</id>
+                                <phase>generate-sources</phase>
                                 <goals>
-                                    <goal>sign</goal>
+                                    <goal>add-source</goal>
                                 </goals>
+                                <configuration>
+                                    <sources>
+                                        <source>src/jre8/java</source>
+                                    </sources>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
                 </plugins>
+
+                <resources>
+                    <resource>
+                        <directory>src/jre8/resources</directory>
+                        <excludes>
+                            <exclude>.gitignore</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>jdk10</id>
+            <activation>
+                <jdk>10</jdk>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>${build.helper.maven.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>add-source</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>add-source</goal>
+                                </goals>
+                                <configuration>
+                                    <sources>
+                                        <source>src/jre10/java</source>
+                                    </sources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+
+                <resources>
+                    <resource>
+                        <directory>src/jre10/resources</directory>
+                        <excludes>
+                            <exclude>.gitignore</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
             </build>
         </profile>
     </profiles>
