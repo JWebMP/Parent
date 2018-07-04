@@ -94,6 +94,7 @@
         <nexus.staging.maven.plugin.version>1.6.3</nexus.staging.maven.plugin.version>
 
         <javax.validations.version>1.1.0.Final</javax.validations.version>
+        <atmosphere.runtime.version>2.4.27</atmosphere.runtime.version>
     </properties>
 
     <dependencyManagement>
@@ -424,6 +425,13 @@
                 <version>${commons.io}</version>
                 <type>jar</type>
             </dependency>
+
+            <dependency>
+                <groupId>org.atmosphere</groupId>
+                <artifactId>atmosphere-runtime</artifactId>
+                <version>${atmosphere.runtime.version}</version>
+            </dependency>
+
 
             <!-- Integration Testing-->
             <!-- Integration Test Framework-->
