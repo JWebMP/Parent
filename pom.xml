@@ -102,6 +102,7 @@
 
         <jsr.250>1.0</jsr.250>
         <xstream.version>1.4.10</xstream.version>
+        <xpp3.version>1.1.6</xpp3.version>
     </properties>
 
     <dependencyManagement>
@@ -115,16 +116,15 @@
             </dependency>
 
             <dependency>
-                <groupId>com.thoughtworks.xstream</groupId>
-                <artifactId>xstream</artifactId>
-                <version>${xstream.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
                 <groupId>javax.annotation</groupId>
                 <artifactId>jsr250-api</artifactId>
                 <version>${jsr.250}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20180130</version>
             </dependency>
 
             <dependency>
