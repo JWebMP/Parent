@@ -797,7 +797,7 @@
                     <dependency>
                         <groupId>javax.transaction</groupId>
                         <artifactId>javax.transaction-api</artifactId>
-                        <version>${javax.transaction.api}</version>
+                        <version>${javax.transaction.transactionapi}</version>
                     </dependency>
                 </dependencies>
             </dependencyManagement>
