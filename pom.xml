@@ -106,10 +106,39 @@
         <jsr.250>1.0</jsr.250>
         <xstream.version>1.4.10</xstream.version>
         <xpp3.version>1.1.6</xpp3.version>
+
+        <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
+        <sonar.exclusions>**bower_components</sonar.exclusions>
+
+        <io.undertow.version>2.0.9.Final</io.undertow.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>io.undertow</groupId>
+                <artifactId>undertow-core</artifactId>
+                <version>${io.undertow.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.undertow</groupId>
+                <artifactId>undertow-servlet</artifactId>
+                <version>${io.undertow.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+                        <groupId>org.jboss.spec.javax.servlet</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.undertow</groupId>
+                <artifactId>undertow-websockets-jsr</artifactId>
+                <version>${io.undertow.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>javax.validation</groupId>
