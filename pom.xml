@@ -966,6 +966,7 @@
                                     <location>${project.basedir}</location>
                                 </offlineLink>
                             </offlineLinks>
+                            <failOnError>false</failOnError>
                         </configuration>
                     </plugin>
 
