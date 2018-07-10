@@ -29,10 +29,11 @@
         <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
 
         <maven.jar.version>3.0.2</maven.jar.version>
-        <maven.dependency.version>3.0.1</maven.dependency.version>
+        <maven.dependency.version>3.0.2</maven.dependency.version>
         <maven.javadoc.version>3.0.1</maven.javadoc.version>
         <maven.deploy.version>2.7</maven.deploy.version>
         <maven.source.version>3.0.1</maven.source.version>
+        <maven.compiler.version>3.7.0</maven.compiler.version>
         <maven.resources.version>3.0.2</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
@@ -690,8 +691,6 @@
                 </configuration>
             </plugin>
 
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -893,6 +892,7 @@
 
                 <maven.compiler.source>1.10</maven.compiler.source>
                 <maven.compiler.target>1.10</maven.compiler.target>
+                <maven.compiler.release>10</maven.compiler.release>
 
                 <jwebmp.runtime.classifier>jre10</jwebmp.runtime.classifier>
 
@@ -911,7 +911,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.7.0</version>
+                        <version>${maven.compiler.version}</version>
                         <configuration>
                             <release>10</release>
                         </configuration>
@@ -959,6 +959,13 @@
                         <version>${maven.javadoc.version}</version>
                         <configuration>
                             <classifier>javadoc-jre10</classifier>
+                            <detectJavaApiLink>false</detectJavaApiLink>
+                            <offlineLinks>
+                                <offlineLink>
+                                    <url>https://docs.oracle.com/javase/${maven.compiler.release}/docs/api/</url>
+                                    <location>${project.basedir}</location>
+                                </offlineLink>
+                            </offlineLinks>
                         </configuration>
                     </plugin>
 
