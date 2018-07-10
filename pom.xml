@@ -30,9 +30,9 @@
 
         <maven.jar.version>3.0.2</maven.jar.version>
         <maven.dependency.version>3.0.1</maven.dependency.version>
-        <maven.javadoc.version>2.10.4</maven.javadoc.version>
+        <maven.javadoc.version>3.0.1</maven.javadoc.version>
         <maven.deploy.version>2.7</maven.deploy.version>
-        <maven.source.version>2.1.2</maven.source.version>
+        <maven.source.version>3.0.1</maven.source.version>
         <maven.resources.version>3.0.2</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
@@ -947,6 +947,33 @@
                             </execution>
                         </executions>
                         <version>${maven.jar.version}</version>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven.source.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                                <configuration>
+                                    <classifier>sources-jre10</classifier>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven.javadoc.version}</version>
+                        <configuration>
+                            <classifier>javadoc-jre10</classifier>
+                        </configuration>
                     </plugin>
 
                     <plugin>
