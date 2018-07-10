@@ -26,6 +26,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
+
         <maven.jar.version>3.0.2</maven.jar.version>
         <maven.dependency.version>3.0.1</maven.dependency.version>
         <maven.javadoc.version>2.10.4</maven.javadoc.version>
@@ -212,6 +214,12 @@
                 <artifactId>guice</artifactId>
                 <version>${guice.version}</version>
                 <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jsr305</artifactId>
+                        <groupId>com.google.code.findbugs</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -338,12 +346,12 @@
 
             <!-- Test Libraries -->
             <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>${junit.jupiter.version}</version>
-                <scope>test</scope>
-                <type>jar</type>
-            </dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
 
             <dependency>
                 <groupId>org.hamcrest</groupId>
@@ -883,6 +891,8 @@
                 <jar.classifier>jre10</jar.classifier>
                 <maven.compiler.source>1.10</maven.compiler.source>
                 <maven.compiler.target>1.10</maven.compiler.target>
+
+                <jwebmp.runtime.classifier>jre10</jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
                 <dependencies>
