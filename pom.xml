@@ -639,7 +639,6 @@
                 <type>jar</type>
             </dependency>
 
-
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-client</artifactId>
@@ -891,10 +890,12 @@
             <properties>
                 <jdk.version>1.10</jdk.version>
                 <jar.classifier>jre10</jar.classifier>
+
                 <maven.compiler.source>1.10</maven.compiler.source>
                 <maven.compiler.target>1.10</maven.compiler.target>
 
                 <jwebmp.runtime.classifier>jre10</jwebmp.runtime.classifier>
+
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -939,12 +940,6 @@
                                     <classifier>test-jre10</classifier>
                                 </configuration>
                             </execution>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
                         </executions>
                         <version>${maven.jar.version}</version>
                     </plugin>
@@ -953,18 +948,9 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                                <configuration>
-                                    <classifier>sources-jre10</classifier>
-                                </configuration>
-                            </execution>
-                        </executions>
+                        <configuration>
+                            <classifier>sources-jre10</classifier>
+                        </configuration>
                     </plugin>
 
                     <plugin>
