@@ -9,6 +9,7 @@
 
     <name>JWebMP BOM</name>
     <description>The BOM for JWebMP</description>
+    <url>https://jwebmp.com</url>
 
     <repositories>
         <repository>
@@ -36,6 +37,7 @@
         <maven.compiler.version>3.7.0</maven.compiler.version>
         <maven.resources.version>3.0.2</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
+        <maven.versions.version>2.5</maven.versions.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
         <lombok.version>1.18.0</lombok.version>
 
@@ -672,6 +674,11 @@
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>3.1.0</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>${maven.versions.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -799,6 +806,20 @@
                     <reportSet>
                         <reports>
                             <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${maven.versions.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependency-updates-report</report>
+                            <report>plugin-updates-report</report>
+                            <report>property-updates-report</report>
                         </reports>
                     </reportSet>
                 </reportSets>
