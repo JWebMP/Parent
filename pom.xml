@@ -118,6 +118,8 @@
 
         <io.undertow.version>2.0.9.Final</io.undertow.version>
         <tica.version>1.18</tica.version>
+
+        <java.mail.version>1.6.1</java.mail.version>
     </properties>
 
     <dependencyManagement>
@@ -149,6 +151,10 @@
                     <exclusion>
                         <artifactId>jboss-servlet-api_4.0_spec</artifactId>
                         <groupId>org.jboss.spec.javax.servlet</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+                        <groupId>org.jboss.spec.javax.annotation</groupId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -363,12 +369,12 @@
 
             <!-- Test Libraries -->
             <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-            <type>jar</type>
-        </dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.jupiter.version}</version>
+                <scope>test</scope>
+                <type>jar</type>
+            </dependency>
 
             <dependency>
                 <groupId>org.hamcrest</groupId>
@@ -409,6 +415,18 @@
                 <type>jar</type>
             </dependency>
 
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${java.mail.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>activation</artifactId>
+                        <groupId>javax.activation</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- Hibernate if required -->
 
             <dependency>
@@ -432,6 +450,10 @@
                     <exclusion>
                         <artifactId>jboss-transaction-api_1.2_spec</artifactId>
                         <groupId>org.jboss.spec.javax.transaction</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>javax.activation-api</artifactId>
+                        <groupId>javax.activation</groupId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -951,9 +973,9 @@
         </profile>
         <profile>
             <id>jdk10</id>
-			<activation>
-					<jdk>1.10</jdk>
-				</activation>
+            <activation>
+                <jdk>1.10</jdk>
+            </activation>
             <properties>
                 <jdk.version>1.10</jdk.version>
                 <jar.classifier>jre10</jar.classifier>
