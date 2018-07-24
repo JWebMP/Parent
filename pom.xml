@@ -173,6 +173,12 @@
                 <groupId>io.undertow</groupId>
                 <artifactId>undertow-websockets-jsr</artifactId>
                 <version>${io.undertow.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-websocket-api_1.1_spec</artifactId>
+                        <groupId>org.jboss.spec.javax.websocket</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
