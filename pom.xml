@@ -45,7 +45,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.5</jackson.version>
-        <fastclasspath.version>3.1.13</fastclasspath.version>
+        <fastclasspath.version>4.0.4</fastclasspath.version>
         <guice.version>4.2.0</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -201,8 +201,8 @@
             </dependency>
 
             <dependency>
-                <groupId>io.github.lukehutch</groupId>
-                <artifactId>fast-classpath-scanner</artifactId>
+                <groupId>io.github.classgraph</groupId>
+                <artifactId>classgraph</artifactId>
                 <version>${fastclasspath.version}</version>
                 <type>jar</type>
             </dependency>
