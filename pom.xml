@@ -903,13 +903,9 @@
 
         <profile>
             <id>jdk8</id>
-            <activation>
-                <jdk>1.8</jdk>
-            </activation>
             <properties>
                 <maven.compiler.source>1.8</maven.compiler.source>
                 <maven.compiler.target>1.8</maven.compiler.target>
-
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -980,9 +976,6 @@
         </profile>
         <profile>
             <id>jdk10</id>
-            <activation>
-                <jdk>1.10</jdk>
-            </activation>
             <properties>
                 <jdk.version>1.10</jdk.version>
                 <jar.classifier>jre10</jar.classifier>
