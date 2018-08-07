@@ -11,19 +11,6 @@
     <description>The BOM for JWebMP</description>
     <url>https://jwebmp.com</url>
 
-    <repositories>
-        <repository>
-            <id>jwebmp-snapshot</id>
-            <name>JWebMPArtifactory-snapshots</name>
-            <url>https://jwebmp.com/artifactory/libs-snapshot</url>
-        </repository>
-        <repository>
-            <id>jwebmp-release</id>
-            <name>JWebMPArtifactory-release</name>
-            <url>https://jwebmp.com/artifactory/libs-release</url>
-        </repository>
-    </repositories>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -906,6 +893,7 @@
             <properties>
                 <maven.compiler.source>1.8</maven.compiler.source>
                 <maven.compiler.target>1.8</maven.compiler.target>
+                <jwebmp.runtime.classifier>jre8</jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -925,6 +913,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
+                            <classifier>${jwebmp.runtime.classifier}</classifier>
                         </configuration>
                         <executions>
                             <execution>
@@ -950,6 +939,7 @@
                                 </goals>
                                 <configuration>
                                     <sources>
+                                        <source>src/main/java</source>
                                         <source>src/jre8/java</source>
                                     </sources>
                                 </configuration>
@@ -1071,6 +1061,7 @@
                                 </goals>
                                 <configuration>
                                     <sources>
+                                        <source>src/main/java</source>
                                         <source>src/jre10/java</source>
                                     </sources>
                                 </configuration>
