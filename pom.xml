@@ -17,7 +17,7 @@
         <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
 
         <maven.jar.version>3.0.2</maven.jar.version>
-        <maven.dependency.version>3.0.2</maven.dependency.version>
+        <maven.dependency.version>3.1.1</maven.dependency.version>
         <maven.javadoc.version>3.0.1</maven.javadoc.version>
         <maven.deploy.version>2.7</maven.deploy.version>
         <maven.source.version>3.0.1</maven.source.version>
@@ -727,6 +727,12 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven.dependency.version}</version>
             </plugin>
 
             <plugin>
