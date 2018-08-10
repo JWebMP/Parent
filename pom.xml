@@ -33,7 +33,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.5</jackson.version>
-        <fastclasspath.version>4.0.4</fastclasspath.version>
+        <fastclasspath.version>4.0.6</fastclasspath.version>
         <guice.version>4.2.0</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -59,7 +59,7 @@
 
         <h2.db.api>1.4.196</h2.db.api>
 
-        <maven.hibernate.version>5.3.2.Final</maven.hibernate.version>
+        <maven.hibernate.version>5.3.4.Final</maven.hibernate.version>
         <maven.hibernate.validator.version>6.0.10.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.0.1.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
