@@ -874,6 +874,7 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
+                                    <executable>gpg2</executable>
                                     <gpgArguments>
                                         <arg>--pinentry-mode</arg>
                                         <arg>loopback</arg>
@@ -922,6 +923,7 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
+                                    <executable>gpg2</executable>
                                     <passphrase>${gpg.passphrase}</passphrase>
                                     <gpgArguments>
                                         <arg>--pinentry-mode</arg>
