@@ -923,7 +923,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>${jwebmp.runtime.classifier}</classifier>
+                            <classifier>jre8</classifier>
                         </configuration>
                         <executions>
                             <execution>
@@ -1036,13 +1036,16 @@
                                 <version>6.2</version> <!-- Use newer version of ASM -->
                             </dependency>
                         </dependencies>
+                        <configuration>
+
+                        </configuration>
                     </plugin>
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>${jwebmp.runtime.classifier}</classifier>
+                            <classifier>jre10</classifier>
                         </configuration>
                         <executions>
                             <execution>
