@@ -874,7 +874,7 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <passphrase>${gpg.password}</passphrase>
+                                    <passphrase>${gpg.passphrase}</passphrase>
                                 </configuration>
                             </execution>
                         </executions>
@@ -918,7 +918,7 @@
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <passphrase>${gpg.password}</passphrase>
+                                    <passphrase>${gpg.passphrase}</passphrase>
                                 </configuration>
                             </execution>
                         </executions>
