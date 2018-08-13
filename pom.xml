@@ -877,7 +877,7 @@
                                     <executable>gpg2</executable>
                                     <gpgArguments>
                                         <!--       <arg>&#45;&#45;pinentry-mode</arg>-->
-                                        <arg>loopback</arg>
+                                        <!--<arg>loopback</arg>-->
                                     </gpgArguments>
                                     <passphrase>${gpg.passphrase}</passphrase>
                                 </configuration>
@@ -927,7 +927,7 @@
                                     <passphrase>${gpg.passphrase}</passphrase>
                                     <gpgArguments>
                                         <!--<arg>&#45;&#45;pinentry-mode</arg>-->
-                                        <arg>loopback</arg>
+                                        <!--  <arg>loopback</arg>-->
                                     </gpgArguments>
                                 </configuration>
                             </execution>
