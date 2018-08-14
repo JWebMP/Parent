@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jwebmp</groupId>
-    <artifactId>jwebmp-bom</artifactId>
+    <artifactId>jwebmp-parent</artifactId>
     <version>0.0.0_0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -1005,7 +1005,7 @@
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
                         <configuration>
-                            <classifier>sources-jre8</classifier>
+                            <classifier>jre8-sources</classifier>
                         </configuration>
                     </plugin>
 
@@ -1014,7 +1014,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>javadoc-jre8</classifier>
+                            <classifier>jre8-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
@@ -1109,7 +1109,7 @@
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
                         <configuration>
-                            <classifier>sources-jre10</classifier>
+                            <classifier>jre10-sources</classifier>
                         </configuration>
                     </plugin>
 
@@ -1118,7 +1118,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>javadoc-jre10</classifier>
+                            <classifier>jre10-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
