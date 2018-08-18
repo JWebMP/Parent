@@ -1087,9 +1087,6 @@
                                 <goals>
                                     <goal>test-jar</goal>
                                 </goals>
-                                <configuration>
-                                    <classifier>test-jre10</classifier>
-                                </configuration>
                             </execution>
                         </executions>
                         <version>${maven.jar.version}</version>
