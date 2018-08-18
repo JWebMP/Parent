@@ -951,7 +951,7 @@
             <properties>
                 <maven.compiler.source>1.8</maven.compiler.source>
                 <maven.compiler.target>1.8</maven.compiler.target>
-                <jwebmp.runtime.classifier>jre8</jwebmp.runtime.classifier>
+                <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -968,9 +968,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-                            <classifier>${jwebmp.runtime.classifier}</classifier>
-                        </configuration>
                         <executions>
                             <execution>
                                 <id>testJar</id>
@@ -1007,9 +1004,6 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
-                        <configuration>
-                            <classifier>${jwebmp.runtime.classifier}-sources</classifier>
-                        </configuration>
                     </plugin>
 
                     <plugin>
@@ -1017,7 +1011,6 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>${jwebmp.runtime.classifier}-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
@@ -1051,14 +1044,10 @@
             <properties>
                 <jdk.version>1.10</jdk.version>
                 <jar.classifier>jre10</jar.classifier>
-
-
                 <maven.compiler.source>1.10</maven.compiler.source>
                 <maven.compiler.target>1.10</maven.compiler.target>
                 <maven.compiler.release>10</maven.compiler.release>
-
-                <jwebmp.runtime.classifier>jre10</jwebmp.runtime.classifier>
-
+                <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -1111,9 +1100,6 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
-                        <configuration>
-                            <classifier>${jwebmp.runtime.classifier}-sources</classifier>
-                        </configuration>
                     </plugin>
 
                     <plugin>
@@ -1121,7 +1107,6 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>${jwebmp.runtime.classifier}-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
