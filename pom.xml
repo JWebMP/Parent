@@ -7,8 +7,8 @@
     <version>0.0.0_0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>JWebMP BOM</name>
-    <description>The BOM for JWebMP</description>
+    <name>JWebMP Parent</name>
+    <description>The Parent POM for JWebMP</description>
     <url>https://jwebmp.com</url>
 
     <properties>
@@ -186,7 +186,7 @@
             <dependency>
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
-                <version>20180130</version>
+                <version>20180813</version>
             </dependency>
 
             <dependency>
@@ -966,7 +966,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>jre8</classifier>
+                            <classifier>${jwebmp.runtime.classifier}</classifier>
                         </configuration>
                         <executions>
                             <execution>
@@ -1014,7 +1014,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>jre8-javadoc</classifier>
+                            <classifier>${jwebmp.runtime.classifier}-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
@@ -1088,7 +1088,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>jre10</classifier>
+                            <classifier>${jwebmp.runtime.classifier}</classifier>
                         </configuration>
                         <executions>
                             <execution>
@@ -1109,7 +1109,7 @@
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
                         <configuration>
-                            <classifier>jre10-sources</classifier>
+                            <classifier>${jwebmp.runtime.classifier}-sources</classifier>
                         </configuration>
                     </plugin>
 
@@ -1118,7 +1118,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <classifier>jre10-javadoc</classifier>
+                            <classifier>${jwebmp.runtime.classifier}-javadoc</classifier>
                             <detectJavaApiLink>false</detectJavaApiLink>
                             <offlineLinks>
                                 <offlineLink>
