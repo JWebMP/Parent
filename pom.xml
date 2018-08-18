@@ -950,14 +950,12 @@
             </properties>
             <dependencyManagement>
                 <dependencies>
-
                     <dependency>
                         <groupId>javax.transaction</groupId>
                         <artifactId>jta</artifactId>
                         <version>${javax.transaction.api}</version>
                         <type>jar</type>
                     </dependency>
-
                 </dependencies>
             </dependencyManagement>
             <build>
@@ -1005,7 +1003,7 @@
                         <artifactId>maven-source-plugin</artifactId>
                         <version>${maven.source.version}</version>
                         <configuration>
-                            <classifier>jre8-sources</classifier>
+                            <classifier>${jwebmp.runtime.classifier}-sources</classifier>
                         </configuration>
                     </plugin>
 
