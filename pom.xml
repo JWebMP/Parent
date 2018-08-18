@@ -1043,7 +1043,6 @@
             <id>jdk10</id>
             <properties>
                 <jdk.version>1.10</jdk.version>
-                <jar.classifier>jre10</jar.classifier>
                 <maven.compiler.source>1.10</maven.compiler.source>
                 <maven.compiler.target>1.10</maven.compiler.target>
                 <maven.compiler.release>10</maven.compiler.release>
