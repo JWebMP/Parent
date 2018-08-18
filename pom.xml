@@ -110,11 +110,9 @@
 
         <java.mail.version>1.6.1</java.mail.version>
 
-        <properties>
-            <maven.compiler.source>1.8</maven.compiler.source>
-            <maven.compiler.target>1.8</maven.compiler.target>
-            <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
-        </properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
 
     </properties>
 
