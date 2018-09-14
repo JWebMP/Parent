@@ -56,7 +56,7 @@
         <javax.persistence.api>2.2</javax.persistence.api>
         <javax.transaction.api>1.1</javax.transaction.api>
         <javax.transaction.transactionapi>1.3</javax.transaction.transactionapi>
-
+        <eclipselink.version>2.7.3</eclipselink.version>
 
         <h2.db.api>1.4.197</h2.db.api>
 
@@ -474,6 +474,17 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>eclipselink</artifactId>
+                <version>${eclipselink.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>org.eclipse.persistence.jpa</artifactId>
+                <version>${eclipselink.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.hibernate</groupId>
@@ -686,6 +697,11 @@
                 <type>jar</type>
             </dependency>
 
+            <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.hazelcast</groupId>
