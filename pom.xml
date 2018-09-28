@@ -34,7 +34,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.6</jackson.version>
-        <fastclasspath.version>4.1.7</fastclasspath.version>
+        <fastclasspath.version>4.2.2</fastclasspath.version>
         <guice.version>4.2.0</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -88,6 +88,7 @@
         <sonar.exclusions>**bower_components</sonar.exclusions>
 
         <undertow.version>1.4.21.Final</undertow.version>
+        <xnio.version>3.3.8.Final</xnio.version>
 
         <m2e.jsf.activation>false</m2e.jsf.activation>
         <m2e.jpa.activation>false</m2e.jpa.activation>
@@ -136,6 +137,16 @@
                 <groupId>io.undertow</groupId>
                 <artifactId>undertow-core</artifactId>
                 <version>${io.undertow.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-nio</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -155,6 +166,14 @@
                         <artifactId>jboss-servlet-api_3.1_spec</artifactId>
                         <groupId>org.jboss.spec.javax.servlet</groupId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-nio</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-api</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -172,6 +191,14 @@
                     <exclusion>
                         <artifactId>jboss-websocket-api_1.1_spec</artifactId>
                         <groupId>org.jboss.spec.javax.websocket</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-nio</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.xnio</groupId>
+                        <artifactId>xnio-api</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -193,6 +220,18 @@
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
                 <version>20180813</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.xnio</groupId>
+                <artifactId>xnio-nio</artifactId>
+                <version>${xnio.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.xnio</groupId>
+                <artifactId>xnio-api</artifactId>
+                <version>${xnio.version}</version>
             </dependency>
 
             <dependency>
@@ -987,7 +1026,6 @@
             <properties>
                 <maven.compiler.source>1.8</maven.compiler.source>
                 <maven.compiler.target>1.8</maven.compiler.target>
-                <maven.compiler.release>8</maven.compiler.release>
                 <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
@@ -1053,13 +1091,6 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.version}</version>
                         <configuration>
-                            <detectJavaApiLink>false</detectJavaApiLink>
-                            <offlineLinks>
-                                <offlineLink>
-                                    <url>https://docs.oracle.com/javase/${maven.compiler.release}/docs/api/</url>
-                                    <location>${project.basedir}</location>
-                                </offlineLink>
-                            </offlineLinks>
                             <failOnError>false</failOnError>
                         </configuration>
                     </plugin>
