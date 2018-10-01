@@ -28,6 +28,7 @@
         <maven.resources.version>3.1.0</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
         <maven.versions.version>2.5</maven.versions.version>
+        <maven.asm.version>6.2.1</maven.asm.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
         <lombok.version>1.18.0</lombok.version>
 
@@ -35,8 +36,8 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.6</jackson.version>
-        <fastclasspath.version>4.2.3</fastclasspath.version>
-        <guice.version>4.2.0</guice.version>
+        <fastclasspath.version>4.2.5</fastclasspath.version>
+        <guice.version>4.2.1</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
         <guava.version>26.0-jre</guava.version>
@@ -44,6 +45,7 @@
         <javassist.version>3.23.1-GA</javassist.version>
         <jcabi.aspects.version>0.22.6</jcabi.aspects.version>
         <javax.cache.api.version>1.1.0</javax.cache.api.version>
+        <javax.activation.version>1.2.0</javax.activation.version>
         <jaxb.version>2.3.0</jaxb.version>
 
         <jsr305.version>2.0.3</jsr305.version>
@@ -61,8 +63,8 @@
 
         <h2.db.api>1.4.197</h2.db.api>
 
-        <maven.hibernate.version>5.3.5.Final</maven.hibernate.version>
-        <maven.hibernate.validator.version>6.0.12.Final</maven.hibernate.validator.version>
+        <maven.hibernate.version>5.3.6.Final</maven.hibernate.version>
+        <maven.hibernate.validator.version>6.0.13.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.0.4.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
 
@@ -1129,7 +1131,7 @@
                             <dependency>
                                 <groupId>org.ow2.asm</groupId>
                                 <artifactId>asm</artifactId>
-                                <version>6.2</version> <!-- Use newer version of ASM -->
+                                <version>${maven.asm.version}</version> <!-- Use newer version of ASM -->
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -1247,7 +1249,7 @@
                             <dependency>
                                 <groupId>org.ow2.asm</groupId>
                                 <artifactId>asm</artifactId>
-                                <version>6.2</version> <!-- Use newer version of ASM -->
+                                <version>${maven.asm.version}</version> <!-- Use newer version of ASM -->
                             </dependency>
                         </dependencies>
                         <configuration>
