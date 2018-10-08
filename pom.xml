@@ -36,7 +36,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.6</jackson.version>
-        <fastclasspath.version>4.2.5</fastclasspath.version>
+        <fastclasspath.version>4.2.9</fastclasspath.version>
         <guice.version>4.2.1</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -912,6 +912,44 @@
 
     <profiles>
         <profile>
+            <id>m2e</id>
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.eclipse.m2e</groupId>
+                        <artifactId>lifecycle-mapping</artifactId>
+                        <version>1.0.0</version>
+                        <configuration>
+                            <lifecycleMappingMetadata>
+                                <pluginExecutions>
+                                    <pluginExecution>
+                                        <pluginExecutionFilter>
+                                            <groupId>org.codehaus.mojo</groupId>
+                                            <artifactId>build-helper-maven-plugin</artifactId>
+                                            <versionRange>[1.0,)</versionRange>
+                                            <goals>
+                                                <goal>test-compile</goal>
+                                                <goal>compile</goal>
+                                            </goals>
+                                        </pluginExecutionFilter>
+                                        <action>
+                                            <execute/>
+                                        </action>
+                                    </pluginExecution>
+                                </pluginExecutions>
+                            </lifecycleMappingMetadata>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
             <id>jwebmp-distribution</id>
             <activation>
                 <property>
@@ -1135,7 +1173,25 @@
                             </dependency>
                         </dependencies>
                         <configuration>
-
+                            <annotationProcessorPaths>
+                                <annotationProcessorPath>
+                                    <groupId>javax.xml.bind</groupId>
+                                    <artifactId>jaxb-api</artifactId>
+                                    <version>${jaxb.version}</version>
+                                </annotationProcessorPath>
+                            </annotationProcessorPaths>
+                            <compilerArgs>
+                                <arg>-AaddGeneratedAnnotation=false</arg>
+                                <arg>--patch-module</arg>
+                                <arg>java.transaction=${settings.localRepository}/javax/transaction/javax.transaction-api/${javax.transaction.transactionapi}/javax.transaction-api-${javax.transaction.transactionapi}.jar</arg>
+                                <arg>--patch-module</arg>
+                                <arg>java.xml.bind=${settings.localRepository}/javax/xml/bind/jaxb-api/${jaxb.version}/jaxb-api-${jaxb.version}.jar</arg>
+                            </compilerArgs>
+                            <compilerArguments>
+                                <AaddGeneratedAnnotation>false</AaddGeneratedAnnotation>
+                                <Adebug>true</Adebug>
+                            </compilerArguments>
+                            <failOnError>true</failOnError>
                         </configuration>
                     </plugin>
 
