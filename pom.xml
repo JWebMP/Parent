@@ -1234,7 +1234,8 @@
                                     <location>${project.basedir}</location>
                                 </offlineLink>
                             </offlineLinks>
-                            <failOnError>false</failOnError>
+                            <failOnError>true</failOnError>
+                            <javadocExecutable>/opt/java-10-openjdk-amd64//bin/javadoc</javadocExecutable>
                         </configuration>
                     </plugin>
 
@@ -1352,7 +1353,8 @@
                                     <location>${project.basedir}</location>
                                 </offlineLink>
                             </offlineLinks>
-                            <failOnError>false</failOnError>
+                            <failOnError>true</failOnError>
+                            <javadocExecutable>/opt/jdk11/jdk-11/bin/javadoc</javadocExecutable>
                         </configuration>
                     </plugin>
 
