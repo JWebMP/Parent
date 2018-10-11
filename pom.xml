@@ -36,7 +36,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.6</jackson.version>
-        <fastclasspath.version>4.2.9</fastclasspath.version>
+        <fastclasspath.version>4.2.12</fastclasspath.version>
         <guice.version>4.2.1</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
