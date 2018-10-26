@@ -956,11 +956,6 @@
         <profile>
             <id>jwebmp-distribution</id>
             <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                    please help love
-                </property>
             </activation>
             <distributionManagement>
                 <snapshotRepository>
