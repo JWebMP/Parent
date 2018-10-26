@@ -35,8 +35,12 @@
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
-        <jackson.version>2.9.6</jackson.version>
-        <fastclasspath.version>4.4.1</fastclasspath.version>
+        <jackson.version>2.9.7</jackson.version>
+        <fastclasspath.version>4.4.7</fastclasspath.version>
+        <faces.version>2.3.5</faces.version>
+        <glassishel.version>3.0.0</glassishel.version>
+        <eewebapi.version>7.0</eewebapi.version>
+
         <guice.version>4.2.1</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
@@ -955,6 +959,7 @@
                 <property>
                     <name>performRelease</name>
                     <value>true</value>
+                    please help love
                 </property>
             </activation>
             <distributionManagement>
