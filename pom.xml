@@ -36,7 +36,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.7</jackson.version>
-        <fastclasspath.version>4.4.10</fastclasspath.version>
+        <fastclasspath.version>4.4.2</fastclasspath.version>
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
