@@ -30,13 +30,13 @@
         <maven.versions.version>2.5</maven.versions.version>
         <maven.asm.version>7.0</maven.asm.version>
         <build.helper.maven.plugin.version>1.7</build.helper.maven.plugin.version>
-        <lombok.version>1.18.2</lombok.version>
+        <lombok.version>1.18.4</lombok.version>
 
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>2.9.7</jackson.version>
-        <fastclasspath.version>4.4.2</fastclasspath.version>
+        <fastclasspath.version>4.4.12</fastclasspath.version>
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
@@ -438,7 +438,7 @@
             <dependency>
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
-                <version>1.8.17</version>
+                <version>1.8.4</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>xml-apis</artifactId>
