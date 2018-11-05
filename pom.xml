@@ -1304,7 +1304,6 @@
                 <maven.compiler.source>1.11</maven.compiler.source>
                 <maven.compiler.target>1.11</maven.compiler.target>
                 <maven.compiler.release>11</maven.compiler.release>
-                <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
             </properties>
             <dependencyManagement>
                 <dependencies>
@@ -1336,9 +1335,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-                            <classifier>${jwebmp.runtime.classifier}</classifier>
-                        </configuration>
                         <version>${maven.jar.version}</version>
                     </plugin>
 
@@ -1391,8 +1387,8 @@
                                 <configuration>
                                     <sources>
                                         <source>src/main/java</source>
-                                        <source>src/jre11/java</source>
                                         <source>src/jre10/java</source>
+                                        <source>src/jre11/java</source>
                                     </sources>
                                 </configuration>
                             </execution>
