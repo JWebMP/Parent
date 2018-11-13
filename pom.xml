@@ -37,6 +37,7 @@
 
         <jackson.version>2.9.7</jackson.version>
         <fastclasspath.version>4.4.12</fastclasspath.version>
+
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
@@ -746,6 +747,48 @@
                 <type>jar</type>
             </dependency>
 
+            <!-- Testings -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>1.8.5</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>4.0.1</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>2.0.0-beta.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-easymock</artifactId>
+                <version>2.0.0-RC.3</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>2.0.0-beta.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.easytesting</groupId>
+                <artifactId>fest-assert</artifactId>
+                <version>1.4</version>
+                <scope>test</scope>
+            </dependency>
 
             <!-- Integration Testing-->
             <!-- Integration Test Framework-->
@@ -825,6 +868,12 @@
                 <artifactId>hazelcast-client</artifactId>
                 <version>${hazelcast.version}</version>
                 <type>jar</type>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>javax.activation-api</artifactId>
+                <version>${javax.activation.version}</version>
             </dependency>
 
         </dependencies>
