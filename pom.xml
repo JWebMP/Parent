@@ -35,7 +35,7 @@
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
-        <jackson.version>2.9.7</jackson.version>
+        <jackson.version>2.9.8-SNAPSHOT</jackson.version>
         <fastclasspath.version>4.4.12</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
@@ -455,13 +455,6 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-guice</artifactId>
-                <version>${jackson.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-xml</artifactId>
                 <version>${jackson.version}</version>
                 <type>jar</type>
             </dependency>
