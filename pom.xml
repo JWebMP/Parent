@@ -42,7 +42,7 @@
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
 
-        <guice.version>4.2.2</guice.version>
+        <guice.version>4.2.3-SNAPSHOT</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
         <guava.version>26.0-jre</guava.version>
@@ -1396,7 +1396,7 @@
                 <jdk.version>1.11</jdk.version>
                 <maven.compiler.source>1.11</maven.compiler.source>
                 <maven.compiler.target>1.11</maven.compiler.target>
-                <maven.compiler.release>11</maven.compiler.release>
+                <maven.compiler.release>1.11</maven.compiler.release>
             </properties>
             <dependencyManagement>
                 <dependencies>
