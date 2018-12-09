@@ -36,13 +36,13 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>${project.version}</jackson.version>
-        <fastclasspath.version>4.6.3</fastclasspath.version>
+        <fastclasspath.version>4.6.6</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
 
-        <guice.version>${project.version}}</guice.version>
+        <guice.version>${project.version}</guice.version>
         <sonarqube.version>3.3.0.603</sonarqube.version>
         <jacoco.version>0.7.9</jacoco.version>
         <guava.version>26.0-jre</guava.version>
