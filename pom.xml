@@ -880,6 +880,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven.compiler.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.ow2.asm</groupId>
+                            <artifactId>asm</artifactId>
+                            <version>${maven.asm.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
 
                 <plugin>
@@ -1154,6 +1161,7 @@
                                 <detectJavaApiLink>false</detectJavaApiLink>
                                 <offlineLinks>
                                     <offlineLink>
+                                        <!--suppress UnresolvedMavenProperty -->
                                         <url>https://docs.oracle.com/javase/${maven.compiler.release}/docs/api/</url>
                                         <location>${project.basedir}</location>
                                     </offlineLink>
