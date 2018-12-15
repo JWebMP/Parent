@@ -46,7 +46,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>${project.version}</jackson.version>
-        <fastclasspath.version>4.6.6</fastclasspath.version>
+        <fastclasspath.version>4.6.8</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
@@ -80,6 +80,7 @@
 
         <h2.db.api>1.4.197</h2.db.api>
 
+        <bytebuddy.version>1.9.6</bytebuddy.version>
         <maven.hibernate.version>5.3.7.Final</maven.hibernate.version>
         <maven.hibernate.validator.version>6.0.13.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.1.0.Final</maven.hibernate.annotations.version>
@@ -507,19 +508,21 @@
                 <artifactId>jboss-logging</artifactId>
                 <version>3.3.2.Final</version>
             </dependency>
+<!--
 
-            <!--     <dependency>
-                     <groupId>net.bytebuddy</groupId>
-                     <artifactId>byte-buddy</artifactId>
-                     <version>1.8.4</version>
-                     <exclusions>
-                         <exclusion>
-                             <artifactId>xml-apis</artifactId>
-                             <groupId>xml-apis</groupId>
-                         </exclusion>
-                     </exclusions>
-                 </dependency>-->
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${bytebuddy.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>xml-apis</artifactId>
+                        <groupId>xml-apis</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
+-->
 
             <!-- Test Libraries -->
             <dependency>
@@ -552,6 +555,12 @@
                 <version>${mockito.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
+             <!--   <exclusions>
+                    <exclusion>
+                        <groupId>net.bytebuddy</groupId>
+                        <artifactId>byte-buddy</artifactId>
+                    </exclusion>
+                </exclusions>-->
             </dependency>
 
             <!-- Database Settings -->
@@ -609,6 +618,10 @@
                         <artifactId>javax.activation-api</artifactId>
                         <groupId>javax.activation</groupId>
                     </exclusion>
+                    <!--<exclusion>
+                        <groupId>net.bytebuddy</groupId>
+                        <artifactId>byte-buddy</artifactId>
+                    </exclusion>-->
                 </exclusions>
             </dependency>
 
