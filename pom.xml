@@ -51,7 +51,7 @@
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
         <eewebapi.version>7.0</eewebapi.version>
-        <resteasy.version>4.0.0.Beta6</resteasy.version>
+        <resteasy.version>3.6.2.Final</resteasy.version>
         <swagger.version>2.0.0</swagger.version>
 
         <guice.version>${project.version}</guice.version>
