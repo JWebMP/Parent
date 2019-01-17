@@ -46,7 +46,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>${project.version}</jackson.version>
-        <fastclasspath.version>4.6.12</fastclasspath.version>
+        <fastclasspath.version>4.6.18</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
@@ -122,7 +122,7 @@
         <m2e.cdi.activation>false</m2e.cdi.activation>
         <m2e.jaxrs.activation>false</m2e.jaxrs.activation>
 
-        <nexus.staging.maven.plugin.version>1.6.3</nexus.staging.maven.plugin.version>
+        <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
 
         <javax.validations.version>2.0.1.Final</javax.validations.version>
         <atmosphere.runtime.version>2.5.1</atmosphere.runtime.version>
