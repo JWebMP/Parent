@@ -1021,6 +1021,11 @@
                     <version>1.9</version>
                 </plugin>
 
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
