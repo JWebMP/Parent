@@ -26,7 +26,7 @@
         <maven.source.version>3.0.1</maven.source.version>
         <maven.site.version>3.7.1</maven.site.version>
         <maven.compiler.version>3.8.0</maven.compiler.version>
-        <maven.surefire.version>3.0.0-M1</maven.surefire.version>
+        <maven.surefire.version>3.0.0-M3</maven.surefire.version>
         <maven.failsafe.version>3.0.0-M1</maven.failsafe.version>
         <maven.resources.version>3.1.0</maven.resources.version>
         <maven.release.version>2.5.3</maven.release.version>
@@ -46,7 +46,7 @@
         <license.dir>${basedir}</license.dir>
 
         <jackson.version>${project.version}</jackson.version>
-        <fastclasspath.version>4.6.18</fastclasspath.version>
+        <fastclasspath.version>4.6.32</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
@@ -1003,6 +1003,7 @@
                     <version>${maven.ejb.version}</version>
                 </plugin>
 
+                <!-- TODO move these versions up into properties -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
@@ -1024,6 +1025,12 @@
                 <plugin>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>1.8</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
                 </plugin>
 
             </plugins>
