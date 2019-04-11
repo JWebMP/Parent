@@ -1,0 +1,3 @@
+[submodule "JWebMPBuilder"]
+	path = JWebMPBuilder
+	url = https://github.com/GedMarc/JWebMP-Builder.git
