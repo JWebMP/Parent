@@ -1277,9 +1277,6 @@
 
     <profiles>
         <profile>
-        <id>enable-guice</id>
-        </profile>
-        <profile>
             <id>jwebmp-distribution</id>
             <activation>
             </activation>
@@ -1568,6 +1565,9 @@
         </profile>
         <profile>
             <id>enable-commons</id>
+        </profile>
+        <profile>
+            <id>enable-thirdparty</id>
         </profile>
     </profiles>
 
