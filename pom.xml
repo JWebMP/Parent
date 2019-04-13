@@ -1560,6 +1560,15 @@
                 <module>JWebMPBuilder</module>
             </modules>
         </profile>
+        <profile>
+            <id>enable-jackson</id>
+        </profile>
+        <profile>
+            <id>enable-guice</id>
+        </profile>
+        <profile>
+            <id>enable-commons</id>
+        </profile>
     </profiles>
 
 </project>
