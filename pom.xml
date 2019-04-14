@@ -1571,10 +1571,19 @@
             <id>enable-guice</id>
         </profile>
         <profile>
+            <id>enable-guicedee</id>
+        </profile>
+        <profile>
             <id>enable-commons</id>
         </profile>
         <profile>
             <id>enable-thirdparty</id>
+        </profile>
+        <profile>
+            <id>enable-jqxwidgets</id>
+        </profile>
+        <profile>
+            <id>enable-plugins</id>
         </profile>
     </profiles>
 
