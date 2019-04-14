@@ -703,10 +703,6 @@
                         <artifactId>javax.activation-api</artifactId>
                         <groupId>javax.activation</groupId>
                     </exclusion>
-                    <!--<exclusion>
-                        <groupId>net.bytebuddy</groupId>
-                        <artifactId>byte-buddy</artifactId>
-                    </exclusion>-->
                 </exclusions>
             </dependency>
 
@@ -739,7 +735,6 @@
                 <artifactId>hibernate-jpa-2.1-api</artifactId>
                 <version>${maven.hibernate.jpa.persistence.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
@@ -1590,6 +1585,9 @@
         </profile>
         <profile>
             <id>enable-plugins</id>
+        </profile>
+        <profile>
+            <id>enable-examples</id>
         </profile>
     </profiles>
 
