@@ -1135,6 +1135,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven.source.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <plugin>
@@ -1158,6 +1163,11 @@
                             <additionalOption>-Xdoclint:none</additionalOption>
                         </additionalOptions>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadoc</id>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <plugin>
@@ -1378,6 +1388,15 @@
                         <artifactId>nexus-staging-maven-plugin</artifactId>
                         <version>${nexus.staging.maven.plugin.version}</version>
                         <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>default-deploy</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>deploy</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                         <configuration>
                             <serverId>sonar-snapshot</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
@@ -1385,6 +1404,14 @@
                             <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
                         </configuration>
                     </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-deploy-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
+
                 </plugins>
             </build>
         </profile>
@@ -1436,6 +1463,11 @@
                                     <additionalOption>-Xdoclint:none</additionalOption>
                                 </additionalOptions>
                             </configuration>
+                            <executions>
+                                <execution>
+                                    <id>attach-javadoc</id>
+                                </execution>
+                            </executions>
                         </plugin>
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
@@ -1517,6 +1549,11 @@
                                     <additionalOption>-Xdoclint:none</additionalOption>
                                 </additionalOptions>
                             </configuration>
+                            <executions>
+                                <execution>
+                                    <id>attach-javadoc</id>
+                                </execution>
+                            </executions>
                         </plugin>
 
                         <plugin>
