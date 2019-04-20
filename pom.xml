@@ -47,7 +47,7 @@
         <mapstruct.version>1.3.0.Final</mapstruct.version>
 
         <jackson.version>${project.version}</jackson.version>
-        <fastclasspath.version>4.8.24</fastclasspath.version>
+        <fastclasspath.version>4.8.25</fastclasspath.version>
 
         <faces.version>2.3.5</faces.version>
         <glassishel.version>3.0.0</glassishel.version>
