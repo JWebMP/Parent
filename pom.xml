@@ -65,7 +65,7 @@
         <javax.cache.api.version>1.1.0</javax.cache.api.version>
         <javax.activation.version>1.2.0</javax.activation.version>
         <javax.inject.version>${project.version}</javax.inject.version>
-        <jaxb.version>2.3.0</jaxb.version>
+        <jaxb.version>2.3.1</jaxb.version>
 
         <jsr305.version>2.0.3</jsr305.version>
         <jsr311.api.version>1.1.1</jsr311.api.version>
@@ -1038,6 +1038,26 @@
                 <version>1.0</version>
                 <type>jar</type>
             </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-client-api</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-simple</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-sampling</artifactId>
+                <version>1.2</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
