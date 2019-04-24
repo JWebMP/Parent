@@ -402,10 +402,9 @@
             </dependency>
 
             <dependency>
-                <groupId>javax.transaction</groupId>
-                <artifactId>javax.transaction-api</artifactId>
-                <version>${javax.transaction.transactionapi}</version>
-                <type>jar</type>
+                <groupId>com.jwebmp.thirdparty</groupId>
+                <artifactId>javax.transaction</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- -->
@@ -754,7 +753,7 @@
                 <artifactId>hibernate-jpamodelgen</artifactId>
                 <version>${maven.hibernate.version}</version>
                 <type>jar</type>
-                <scope>compile</scope>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
