@@ -142,7 +142,7 @@
         <io.undertow.version>1.4.27.Final</io.undertow.version>
         <tica.version>1.20</tica.version>
 
-        <java.mail.version>1.6.2</java.mail.version>
+        <java.mail.version>1.6.3</java.mail.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -514,7 +514,7 @@
             <dependency>
                 <groupId>com.sun.mail</groupId>
                 <artifactId>javax.mail</artifactId>
-                <version>${java.mail.version}</version>
+                <version>1.6.2</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>activation</artifactId>
@@ -522,6 +522,19 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+            <dependency>
+                <groupId>jakarta.mail</groupId>
+                <artifactId>jakarta.mail-api</artifactId>
+                <version>1.6.3</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jakarta.activation-api</artifactId>
+                        <groupId>jakarta.activation</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
 
             <!-- Rest Easy-->
             <dependency>
@@ -863,6 +876,12 @@
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${glassfish.jaxb.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.activation</groupId>
+                        <artifactId>jakarta.activation-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -1520,7 +1539,6 @@
                     <groupId>org.mapstruct</groupId>
                     <artifactId>mapstruct-processor</artifactId>
                 </dependency>
-
             </dependencies>
             <build>
                 <pluginManagement>
