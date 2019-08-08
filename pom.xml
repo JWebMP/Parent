@@ -140,7 +140,7 @@
         <sonar.exclusions>**bower_components</sonar.exclusions>
 
         <io.undertow.version>1.4.27.Final</io.undertow.version>
-        <tica.version>1.21</tica.version>
+        <tica.version>1.22</tica.version>
 
         <java.mail.version>1.6.3</java.mail.version>
 
