@@ -119,6 +119,7 @@
         <sonar.exclusions>**bower_components</sonar.exclusions>
 
         <undertow.version>1.4.27.Final</undertow.version>
+        <io.undertow.version>1.4.27.Final</io.undertow.version>
         <xnio.version>3.3.8.Final</xnio.version>
 
         <m2e.jsf.activation>false</m2e.jsf.activation>
@@ -139,7 +140,7 @@
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
         <sonar.exclusions>**bower_components</sonar.exclusions>
 
-        <io.undertow.version>1.4.27.Final</io.undertow.version>
+
         <tica.version>1.22</tica.version>
 
         <java.mail.version>1.6.3</java.mail.version>
