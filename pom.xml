@@ -224,6 +224,13 @@
                 <version>1.1</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging-processor</artifactId>
+                <version>2.2.0.Final</version>
+                <scope>provided</scope>
+            </dependency>
+
             <!-- Stuffs-->
             <dependency>
                 <groupId>org.apache.tika</groupId>
@@ -336,18 +343,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.jboss.xnio</groupId>
-                <artifactId>xnio-nio</artifactId>
-                <version>${xnio.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.xnio</groupId>
-                <artifactId>xnio-api</artifactId>
-                <version>${xnio.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>io.github.classgraph</groupId>
                 <artifactId>classgraph</artifactId>
                 <version>${fastclasspath.version}</version>
@@ -394,15 +389,6 @@
                 <type>jar</type>
             </dependency>
 
-            <!-- -->
-            <!--           <dependency>
-                           <groupId>javax.cache</groupId>
-                           <artifactId>cache-api</artifactId>
-                           <version>${javax.cache.api.version}</version>
-                           <type>jar</type>
-                       </dependency>
-           -->
-
             <dependency>
                 <groupId>com.mchange</groupId>
                 <artifactId>mchange-commons-java</artifactId>
@@ -414,13 +400,6 @@
                 <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
                 <version>0.9.5.4</version>
-            </dependency>
-
-
-            <dependency>
-                <groupId>org.jboss.logging</groupId>
-                <artifactId>jboss-logging</artifactId>
-                <version>3.3.2.Final</version>
             </dependency>
 
             <!-- Test Libraries -->
