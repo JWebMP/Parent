@@ -90,7 +90,7 @@
         <h2.db.api>1.4.199</h2.db.api>
 
         <bytebuddy.version>1.9.14</bytebuddy.version>
-        <maven.hibernate.version>5.4.3.Final</maven.hibernate.version>
+        <maven.hibernate.version>5.4.4.Final</maven.hibernate.version>
         <maven.hibernate.validator.version>6.0.16.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.1.0.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
@@ -278,68 +278,23 @@
 
 
             <dependency>
-                <groupId>io.undertow</groupId>
-                <artifactId>undertow-core</artifactId>
-                <version>${io.undertow.version}</version>
+                <groupId>antlr</groupId>
+                <artifactId>antlr</artifactId>
+                <version>2.7.7</version>
+                <scope>compile</scope>
                 <exclusions>
                     <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-nio</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-api</artifactId>
+                        <artifactId>xml-apis</artifactId>
+                        <groupId>xml-apis</groupId>
                     </exclusion>
                 </exclusions>
             </dependency>
 
             <dependency>
-                <groupId>io.undertow</groupId>
-                <artifactId>undertow-servlet</artifactId>
-                <version>${io.undertow.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>jboss-servlet-api_4.0_spec</artifactId>
-                        <groupId>org.jboss.spec.javax.servlet</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>jboss-annotations-api_1.2_spec</artifactId>
-                        <groupId>org.jboss.spec.javax.annotation</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>jboss-servlet-api_3.1_spec</artifactId>
-                        <groupId>org.jboss.spec.javax.servlet</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-nio</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-
-            <dependency>
-                <groupId>io.undertow</groupId>
-                <artifactId>undertow-websockets-jsr</artifactId>
-                <version>${io.undertow.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>jboss-websocket-api_1.1_spec</artifactId>
-                        <groupId>org.jboss.spec.javax.websocket</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-nio</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-api</artifactId>
-                    </exclusion>
-                </exclusions>
+                <groupId>org.apache.ant</groupId>
+                <artifactId>ant</artifactId>
+                <version>1.10.7</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -461,12 +416,7 @@
 
 
             <!-- Database Settings -->
-            <dependency>
-                <groupId>javax.persistence</groupId>
-                <artifactId>javax.persistence-api</artifactId>
-                <version>${javax.persistence.api}</version>
-                <type>jar</type>
-            </dependency>
+
 
             <dependency>
                 <groupId>com.h2database</groupId>
@@ -717,46 +667,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>${maven.hibernate.version}</version>
-                <type>jar</type>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>jboss-transaction-api_1.2_spec</artifactId>
-                        <groupId>org.jboss.spec.javax.transaction</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.activation-api</groupId>
-                        <artifactId>javax.activation</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.xml.bind</groupId>
-                        <artifactId>jaxb-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>javax.activation-api</artifactId>
-                        <groupId>javax.activation</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>jakarta.activation-api</artifactId>
-                        <groupId>jakarta.activation</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.xml.bind</groupId>
-                        <artifactId>jaxb-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>jaxb-runtime</artifactId>
-                        <groupId>org.glassfish.jaxb</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>javassist</artifactId>
-                        <groupId>org.javassist</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
 
 
             <dependency>
@@ -785,58 +695,6 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
                 <version>${maven.hibernate.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-jcache</artifactId>
-                <version>${maven.hibernate.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.cache</groupId>
-                        <artifactId>cache-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>javax.xml.bind</artifactId>
-                        <groupId>jaxb-api</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate.javax.persistence</groupId>
-                <artifactId>hibernate-jpa-2.1-api</artifactId>
-                <version>${maven.hibernate.jpa.persistence.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate.validator</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${maven.hibernate.validator.version}</version>
-                <type>jar</type>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.validation</groupId>
-                        <artifactId>validation-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-jpamodelgen</artifactId>
-                <version>${maven.hibernate.version}</version>
-                <type>jar</type>
-                <scope>provided</scope>
-                <exclusions>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate.common</groupId>
-                <artifactId>hibernate-commons-annotations</artifactId>
-                <version>${maven.hibernate.annotations.version}</version>
-                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -1199,6 +1057,21 @@
                 <version>1.3.5</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.jboss.classfilewriter</groupId>
+                <artifactId>jboss-classfilewriter</artifactId>
+                <version>1.2.4.Final</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty.alpn</groupId>
+                <artifactId>alpn-api</artifactId>
+                <version>1.1.3.v20160715</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
