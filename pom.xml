@@ -167,6 +167,7 @@
                 <artifactId>error_prone_annotations</artifactId>
                 <version>2.3.2</version>
                 <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <!-- BTM -->
@@ -174,12 +175,6 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.osgi.core</artifactId>
                 <version>1.4.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>javax.jms</groupId>
-                <artifactId>jms</artifactId>
-                <version>1.1</version>
                 <type>jar</type>
             </dependency>
 
@@ -188,6 +183,7 @@
                 <artifactId>logback-classic</artifactId>
                 <version>1.2.3</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -196,32 +192,37 @@
                 <version>3.2.12</version>
                 <scope>provided</scope>
                 <optional>true</optional>
+                <type>jar</type>
             </dependency>
 
-
+<!--
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava-testlib</artifactId>
                 <version>27.1-jre</version>
-            </dependency>
+                <type>jar</type>
+            </dependency>-->
 
             <dependency>
                 <groupId>org.jboss.spec.javax.rmi</groupId>
                 <artifactId>jboss-rmi-api_1.0_spec</artifactId>
                 <version>1.0.6.Final</version>
                 <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
                 <version>1.7.5</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.jcabi</groupId>
                 <artifactId>jcabi-manifests</artifactId>
                 <version>1.1</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -229,6 +230,7 @@
                 <artifactId>jboss-logging-processor</artifactId>
                 <version>2.2.0.Final</version>
                 <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <!-- Stuffs-->
@@ -242,6 +244,7 @@
                         <groupId>commons-io</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -274,6 +277,7 @@
                         <groupId>com.sun.activation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
 
@@ -288,6 +292,7 @@
                         <groupId>xml-apis</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -295,6 +300,7 @@
                 <artifactId>ant</artifactId>
                 <version>1.10.7</version>
                 <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -312,28 +318,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-                <type>jar</type>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>jsr305</artifactId>
-                        <groupId>com.google.code.findbugs</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava-gwt</artifactId>
-                <version>${guava.version}</version>
                 <type>jar</type>
             </dependency>
 
@@ -348,6 +335,7 @@
                 <groupId>com.mchange</groupId>
                 <artifactId>mchange-commons-java</artifactId>
                 <version>0.2.16</version>
+                <type>jar</type>
             </dependency>
 
 
@@ -355,6 +343,7 @@
                 <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
                 <version>0.9.5.4</version>
+                <type>jar</type>
             </dependency>
 
             <!-- Test Libraries -->
@@ -394,24 +383,30 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
                 <version>${bytebuddy.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>2.8.5</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
                 <version>3.13.1</version>
+                <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.squareup.okio</groupId>
                 <artifactId>okio</artifactId>
                 <version>2.2.2</version>
+                <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
 
@@ -435,6 +430,7 @@
                         <groupId>javax.activation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -447,6 +443,7 @@
                         <groupId>jakarta.activation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
 
@@ -481,6 +478,7 @@
                         <groupId>org.jboss.spec.javax.annotation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -488,6 +486,7 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -520,6 +519,7 @@
                         <groupId>org.jboss.spec.javax.annotation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
 
@@ -527,6 +527,7 @@
                 <groupId>org.jboss.resteasy</groupId>
                 <artifactId>resteasy-jaxrs</artifactId>
                 <version>${resteasy.version}</version>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.jboss.resteasy</groupId>
@@ -550,12 +551,14 @@
                         <groupId>org.jboss.spec.javax.annotation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.jboss.spec.javax.annotation</groupId>
                 <artifactId>jboss-annotations-api_1.3_spec</artifactId>
                 <version>${jboss.annotations.spec.version}</version>
+                <type>jar</type>
             </dependency>
 
             <!-- Jackson Dependencies -->
@@ -563,17 +566,20 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
                 <version>${jackson.version}</version>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -586,6 +592,13 @@
                         <artifactId>guice</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jdk8</artifactId>
+                <version>${jackson.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -606,7 +619,11 @@
                         <artifactId>jaxb-runtime</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
+
+
+
 
             <!-- Swagger runtime dependencies -->
             <dependency>
@@ -631,6 +648,7 @@
                         <groupId>com.fasterxml.jackson.core</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -643,6 +661,7 @@
                         <artifactId>swagger-jaxrs2</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <!-- Hibernate if required -->
@@ -673,6 +692,7 @@
                 <groupId>org.eclipse.persistence</groupId>
                 <artifactId>eclipselink</artifactId>
                 <version>${eclipselink.version}</version>
+                <type>jar</type>
             </dependency>
 
 
@@ -683,18 +703,19 @@
                 <type>jar</type>
             </dependency>
 
-<!--
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>org.eclipse.persistence.jpa</artifactId>
-                <version>${eclipselink.version}</version>
-            </dependency>
--->
+            <!--
+                        <dependency>
+                            <groupId>org.eclipse.persistence</groupId>
+                            <artifactId>org.eclipse.persistence.jpa</artifactId>
+                            <version>${eclipselink.version}</version><type>jar</type>
+                        </dependency>
+            -->
 
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
                 <version>${maven.hibernate.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -737,6 +758,7 @@
                 <artifactId>mockito-all</artifactId>
                 <version>${mockito.all.version}</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -744,35 +766,41 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.easymock</groupId>
                 <artifactId>easymock</artifactId>
                 <version>4.0.2</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito2</artifactId>
                 <version>2.0.2</version>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-easymock</artifactId>
                 <version>2.0.2</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-junit4</artifactId>
                 <version>2.0.2</version>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.easytesting</groupId>
                 <artifactId>fest-assert</artifactId>
                 <version>1.4</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
 
             <!-- Integration Testing-->
@@ -783,14 +811,28 @@
                 <version>${selenium.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
-
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-api</artifactId>
                 <version>${selenium.version}</version>
                 <scope>test</scope>
+                <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+            
             <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>selenium-jupiter</artifactId>
@@ -801,15 +843,26 @@
                         <artifactId>activation</artifactId>
                         <groupId>javax.activation</groupId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
                 </exclusions>
                 <type>jar</type>
             </dependency>
+
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-chrome-driver</artifactId>
                 <version>${selenium.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
@@ -817,6 +870,12 @@
                 <version>${selenium.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
@@ -824,6 +883,12 @@
                 <version>${selenium.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
@@ -831,6 +896,12 @@
                 <version>${selenium.version}</version>
                 <scope>test</scope>
                 <type>jar</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -851,13 +922,13 @@
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-client</artifactId>
                 <version>${hazelcast.version}</version>
-                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-hibernate52</artifactId>
                 <version>1.3.2</version>
+                <type>jar</type>
             </dependency>
 
 
@@ -865,12 +936,14 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
                 <version>${mapstruct.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -878,6 +951,7 @@
                 <artifactId>jsr305</artifactId>
                 <version>3.0.2</version>
                 <scope>test</scope>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>com.google.truth</groupId>
@@ -890,11 +964,13 @@
                         <artifactId>checker-compat-qual</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
                 <version>${maven.asm.version}</version>
+                <type>jar</type>
             </dependency>
 
             <!-- Web Services -->
@@ -913,6 +989,7 @@
                         <groupId>com.sun.activation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -941,6 +1018,7 @@
                         <artifactId>javax.activation-api</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.apache.cxf</groupId>
@@ -964,11 +1042,13 @@
                         <artifactId>javax.activation</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>javax.xml.soap</groupId>
                 <artifactId>javax.xml.soap-api</artifactId>
                 <version>1.4.0</version>
+                <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.jvnet.staxex</groupId>
@@ -980,6 +1060,7 @@
                         <artifactId>jakarta.activation-api</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
             <!-- Jetty is needed if you're are not using the CXFServlet -->
             <dependency>
@@ -1004,6 +1085,7 @@
                         <artifactId>javax.activation</artifactId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -1016,24 +1098,28 @@
                         <groupId>jakarta.annotation</groupId>
                     </exclusion>
                 </exclusions>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-client-api</artifactId>
                 <version>1.2</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-simple</artifactId>
                 <version>1.2</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-sampling</artifactId>
                 <version>1.2</version>
+                <type>jar</type>
             </dependency>
 
             <!-- JSF Stuffs -->
@@ -1042,12 +1128,14 @@
                 <groupId>javax.json</groupId>
                 <artifactId>javax.json-api</artifactId>
                 <version>1.1.4</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
                 <groupId>jakarta.annotation</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
                 <version>1.3.5</version>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -1056,6 +1144,7 @@
                 <version>1.2.4.Final</version>
                 <scope>provided</scope>
                 <optional>true</optional>
+                <type>jar</type>
             </dependency>
 
             <dependency>
@@ -1064,6 +1153,7 @@
                 <version>1.1.3.v20160715</version>
                 <scope>provided</scope>
                 <optional>true</optional>
+                <type>jar</type>
             </dependency>
 
         </dependencies>
@@ -1100,6 +1190,7 @@
                             <groupId>org.ow2.asm</groupId>
                             <artifactId>asm</artifactId>
                             <version>${maven.asm.version}</version>
+                            <type>jar</type>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -1150,6 +1241,7 @@
                             <groupId>org.junit.jupiter</groupId>
                             <artifactId>junit-jupiter-engine</artifactId>
                             <version>${junit.jupiter.version}</version>
+                            <type>jar</type>
                         </dependency>
                     </dependencies>
                     <configuration>
@@ -1492,6 +1584,8 @@
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-compiler-plugin</artifactId>
                             <configuration>
+                                <source>12</source>
+                                <target>12</target>
                                 <release>12</release>
                                 <compilerArguments>
                                     <AaddGeneratedAnnotation>false</AaddGeneratedAnnotation>
