@@ -2,6 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.guicedee</groupId>
+        <artifactId>dev-kit</artifactId>
+        <version>0.0.0_0-SNAPSHOT</version>
+    </parent>
+
     <groupId>com.jwebmp</groupId>
     <artifactId>jwebmp-parent</artifactId>
     <version>0.0.0_0-SNAPSHOT</version>
@@ -89,7 +95,7 @@
 
         <h2.db.api>1.4.199</h2.db.api>
 
-        <bytebuddy.version>1.9.14</bytebuddy.version>
+        <bytebuddy.version>1.9.16</bytebuddy.version>
         <maven.hibernate.version>5.4.4.Final</maven.hibernate.version>
         <maven.hibernate.validator.version>6.0.16.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.1.0.Final</maven.hibernate.annotations.version>
@@ -155,6 +161,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guicedee-bom</artifactId>
+                <version>${project.version}</version>
+                <type>import</type>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.jwebmp</groupId>
                 <artifactId>jwebmp-bom</artifactId>
@@ -1140,6 +1154,67 @@
                 <type>jar</type>
             </dependency>
 
+            <!-- POI -->
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>4.1.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.xmlbeans</groupId>
+                        <artifactId>xmlbeans</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.poi</groupId>
+                        <artifactId>poi-ooxml-schemas</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-compress</artifactId>
+                        <groupId>org.apache.commons</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>poi</artifactId>
+                        <groupId>org.apache.poi</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>4.1.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.xmlbeans</groupId>
+                        <artifactId>xmlbeans</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>poi</artifactId>
+                        <groupId>org.apache.poi</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-scratchpad</artifactId>
+                <version>4.1.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.xmlbeans</groupId>
+                        <artifactId>xmlbeans</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>poi</artifactId>
+                        <groupId>org.apache.poi</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -1579,30 +1654,6 @@
             <modules>
                 <module>JWebMPBuilder</module>
             </modules>
-        </profile>
-        <profile>
-            <id>enable-guice</id>
-        </profile>
-        <profile>
-            <id>enable-guicedee</id>
-        </profile>
-        <profile>
-            <id>enable-commons</id>
-        </profile>
-        <profile>
-            <id>enable-thirdparty</id>
-        </profile>
-        <profile>
-            <id>enable-jqxwidgets</id>
-        </profile>
-        <profile>
-            <id>enable-plugins</id>
-        </profile>
-        <profile>
-            <id>enable-examples</id>
-        </profile>
-        <profile>
-            <id>enable-apps</id>
         </profile>
     </profiles>
 
