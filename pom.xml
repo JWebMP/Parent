@@ -1,3 +1,4 @@
+<!--suppress CheckTagEmptyBody -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -25,139 +26,22 @@
         <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
         <surefireArgLine></surefireArgLine>
 
-        <maven.assembly.version>3.1.0</maven.assembly.version>
-        <maven.jar.version>3.1.0</maven.jar.version>
-        <maven.clean.version>3.1.0</maven.clean.version>
-        <maven.dependency.version>3.1.1</maven.dependency.version>
-        <maven.javadoc.version>3.0.1</maven.javadoc.version>
-        <maven.deploy.version>3.0.0-M1</maven.deploy.version>
-        <maven.install.version>3.0.0-M1</maven.install.version>
-        <maven.source.version>3.0.1</maven.source.version>
-        <maven.site.version>3.7.1</maven.site.version>
-        <maven.shade.version>3.2.1</maven.shade.version>
-        <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.surefire.version>3.0.0-M3</maven.surefire.version>
-        <maven.failsafe.version>3.0.0-M1</maven.failsafe.version>
-        <maven.resources.version>3.1.0</maven.resources.version>
-        <maven.release.version>2.5.3</maven.release.version>
-        <maven.versions.version>2.7</maven.versions.version>
-        <maven.verifyier.version>1.1</maven.verifyier.version>
-        <maven.asm.version>7.1</maven.asm.version>
-        <maven.gpg.version>1.6</maven.gpg.version>
-
-        <maven.war.version>3.2.2</maven.war.version>
-        <maven.ear.version>3.0.1</maven.ear.version>
-        <maven.ejb.version>3.0.1</maven.ejb.version>
-
-        <build.helper.maven.plugin.version>3.0.0</build.helper.maven.plugin.version>
-        <lombok.version>1.18.8</lombok.version>
-
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
         <mapstruct.version>1.3.0.Final</mapstruct.version>
 
-        <jackson.version>2.10.0.pr2</jackson.version>
-        <fastclasspath.version>4.8.43</fastclasspath.version>
+        <guicedee.version>${project.version}</guicedee.version>
 
-        <faces.version>2.4.0</faces.version>
-        <glassishel.version>3.0.0</glassishel.version>
-        <eewebapi.version>7.0</eewebapi.version>
-        <resteasy.version>4.1.1.Final</resteasy.version>
-        <swagger.version>2.0.0</swagger.version>
-
-        <guice.version>${project.version}</guice.version>
-        <sonarqube.version>3.5.0.1254</sonarqube.version>
-        <jacoco.version>0.8.2</jacoco.version>
-        <guava.version>28.0-jre</guava.version>
-        <servlet.api.version>3.1.0</servlet.api.version>
-        <javassist.version>3.25.0-GA</javassist.version>
-        <jcabi.aspects.version>0.22.6</jcabi.aspects.version>
-        <javax.cache.api.version>1.1.0</javax.cache.api.version>
-        <javax.activation.version>1.2.0</javax.activation.version>
-        <javax.inject.version>${project.version}</javax.inject.version>
-        <jaxb.version>2.4.0-b180830.0359</jaxb.version>
-        <glassfish.jaxb.version>2.3.2</glassfish.jaxb.version>
-
-        <jsr305.version>2.0.3</jsr305.version>
-        <jsr311.api.version>1.1.1</jsr311.api.version>
-
-        <junit.jupiter.version>5.5.0</junit.jupiter.version>
-        <junit.jupiter.platform.version>1.3.2</junit.jupiter.platform.version>
-        <junit.version>4.12</junit.version>
-        <hamcrest.version>1.3</hamcrest.version>
-        <assertj.version>3.12.2</assertj.version>
-        <mockito.version>3.0.0</mockito.version>
-        <mockito.all.version>2.0.2-beta</mockito.all.version>
-
-        <javax.persistence.api>2.2</javax.persistence.api>
-        <javax.transaction.api>1.1</javax.transaction.api>
-        <javax.transaction.transactionapi>1.3</javax.transaction.transactionapi>
-        <eclipselink.version>2.7.4</eclipselink.version>
-
-        <h2.db.api>1.4.199</h2.db.api>
-
-        <bytebuddy.version>1.9.16</bytebuddy.version>
-        <maven.hibernate.version>5.4.4.Final</maven.hibernate.version>
-        <maven.hibernate.validator.version>6.0.16.Final</maven.hibernate.validator.version>
-        <maven.hibernate.annotations.version>5.1.0.Final</maven.hibernate.annotations.version>
-        <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-
-        <btm.version>2.1.4</btm.version>
-        <jpa21.version>1.0.2.Final</jpa21.version>
-        <hazelcast.version>3.12.1</hazelcast.version>
         <ehcache.version>3.8.0</ehcache.version>
-
-        <quality.check.version>1.3</quality.check.version>
-        <uadetector.core.version>0.9.22</uadetector.core.version>
-        <uadetector.json.version>0.1.22</uadetector.json.version>
-        <uadetector.detector.version>2014.10</uadetector.detector.version>
-        <sl4j.version>1.8.0-beta2</sl4j.version>
-
-        <io.swagger.version>2.0.8</io.swagger.version>
-
-        <!-- <commons.lang3>3.8.1</commons.lang3>
-         <commons.io>2.6</commons.io>
-         <commons.text>1.6</commons.text>-->
-        <!--<commons.fileupload>1.3.3</commons.fileupload>-->
-
 
         <selenium.version>3.141.59</selenium.version>
         <selenium.jupiter.version>3.2.2</selenium.jupiter.version>
 
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
-        <sonar.exclusions>**bower_components</sonar.exclusions>
-
-        <undertow.version>1.4.27.Final</undertow.version>
-        <io.undertow.version>1.4.27.Final</io.undertow.version>
-        <xnio.version>3.3.8.Final</xnio.version>
-
-        <m2e.jsf.activation>false</m2e.jsf.activation>
-        <m2e.jpa.activation>false</m2e.jpa.activation>
-        <m2e.cdi.activation>false</m2e.cdi.activation>
-        <m2e.jaxrs.activation>false</m2e.jaxrs.activation>
-
-        <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
-
-        <atmosphere.runtime.version>2.5.1</atmosphere.runtime.version>
-
-        <jboss.annotations.spec.version>1.0.1.Final</jboss.annotations.spec.version>
-        <jsr.250>1.0</jsr.250>
-        <xstream.version>1.4.10</xstream.version>
-        <xpp3.version>1.1.6</xpp3.version>
-
-        <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
-        <sonar.exclusions>**bower_components</sonar.exclusions>
-
 
         <tica.version>1.22</tica.version>
 
         <java.mail.version>1.6.3</java.mail.version>
-
-        <maven.compiler.source>12</maven.compiler.source>
-        <maven.compiler.target>12</maven.compiler.target>
-        <maven.compiler.release>12</maven.compiler.release>
-        <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
-
     </properties>
 
     <dependencyManagement>
@@ -232,53 +116,6 @@
                 <type>jar</type>
             </dependency>
 
-            <dependency>
-                <groupId>com.mchange</groupId>
-                <artifactId>mchange-commons-java</artifactId>
-                <version>0.2.16</version>
-                <type>jar</type>
-            </dependency>
-
-
-            <dependency>
-                <groupId>com.mchange</groupId>
-                <artifactId>c3p0</artifactId>
-                <version>0.9.5.4</version>
-                <type>jar</type>
-            </dependency>
-
-
-            <dependency>
-                <groupId>net.bytebuddy</groupId>
-                <artifactId>byte-buddy</artifactId>
-                <version>${bytebuddy.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>2.8.5</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>3.13.1</version>
-                <scope>provided</scope>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.squareup.okio</groupId>
-                <artifactId>okio</artifactId>
-                <version>2.2.2</version>
-                <scope>provided</scope>
-                <type>jar</type>
-            </dependency>
-
-
             <!-- Database Settings -->
 
 
@@ -286,19 +123,6 @@
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
                 <version>${h2.db.api}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>1.6.2</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>activation</artifactId>
-                        <groupId>javax.activation</groupId>
-                    </exclusion>
-                </exclusions>
                 <type>jar</type>
             </dependency>
 
@@ -315,84 +139,6 @@
                 <type>jar</type>
             </dependency>
 
-
-            <!-- Jackson Dependencies -->
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.version}</version>
-                <type>jar</type>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-guice</artifactId>
-                <version>${jackson.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.google.inject</groupId>
-                        <artifactId>guice</artifactId>
-                    </exclusion>
-                </exclusions>
-                <type>jar</type>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.datatype</groupId>
-                <artifactId>jackson-datatype-jdk8</artifactId>
-                <version>${jackson.version}</version>
-                <type>jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-jaxb-annotations</artifactId>
-                <version>${jackson.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>jakarta.xml.bind</groupId>
-                        <artifactId>jakarta.xml.bind-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>jakarta.activation</groupId>
-                        <artifactId>jakarta.activation-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.glassfish.jaxb</groupId>
-                        <artifactId>jaxb-runtime</artifactId>
-                    </exclusion>
-                </exclusions>
-                <type>jar</type>
-            </dependency>
-
-            <!-- Hibernate if required -->
-
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-c3p0</artifactId>
-                <version>${maven.hibernate.version}</version>
-                <type>jar</type>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.hibernate</groupId>
-                        <artifactId>hibernate-core</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!-- Integration Testing-->
             <!-- Integration Test Framework-->
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
