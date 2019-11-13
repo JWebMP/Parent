@@ -37,7 +37,7 @@
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
 
         <tica.version>1.22</tica.version>
-        <jackson.version>2.10.0</jackson.version>
+        <jackson.version>2.10.1</jackson.version>
 
         <java.mail.version>1.6.3</java.mail.version>
     </properties>
