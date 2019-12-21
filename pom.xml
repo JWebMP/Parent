@@ -26,14 +26,10 @@
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
         <mapstruct.version>1.3.1.Final</mapstruct.version>
-
         <ehcache.version>3.8.1</ehcache.version>
-
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
-
         <tica.version>1.22</tica.version>
         <jackson.version>2.10.1</jackson.version>
-
         <java.mail.version>1.6.4</java.mail.version>
     </properties>
 
@@ -53,7 +49,7 @@
                 <artifactId>guicedee-bom</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>${guicedee.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
