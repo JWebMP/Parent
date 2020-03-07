@@ -29,7 +29,7 @@
         <ehcache.version>3.8.1</ehcache.version>
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
         <tica.version>1.22</tica.version>
-        <jackson.version>2.10.2</jackson.version>
+        <jackson.version>2.10.3</jackson.version>
         <java.mail.version>1.6.4</java.mail.version>
     </properties>
 
