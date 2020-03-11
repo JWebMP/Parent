@@ -30,7 +30,7 @@
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
         <tica.version>1.22</tica.version>
         <jackson.version>2.10.3</jackson.version>
-        <java.mail.version>1.6.4</java.mail.version>
+        <java.mail.version>1.6.5</java.mail.version>
     </properties>
 
     <profiles>
@@ -154,7 +154,7 @@
             <dependency>
                 <groupId>jakarta.mail</groupId>
                 <artifactId>jakarta.mail-api</artifactId>
-                <version>1.6.4</version>
+                <version>${java.mail.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>jakarta.activation-api</artifactId>
