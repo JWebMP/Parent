@@ -2,6 +2,3 @@
 	path = JWebMPBuilder
 	url = https://github.com/GedMarc/JWebMP-Builder.git
 	ignore = dirty
-[submodule "JWebMP-Builder"]
-	path = JWebMP-Builder
-	url = https://github.com/GedMarc/JWebMP-Builder.git
