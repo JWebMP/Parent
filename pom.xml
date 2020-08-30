@@ -26,7 +26,7 @@
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
-        <ehcache.version>3.8.1</ehcache.version>
+        <ehcache.version>3.9.0</ehcache.version>
         <sonar.host.url>https://jwebmp.com/sonar</sonar.host.url>
         <tica.version>1.22</tica.version>
         <java.mail.version>1.6.5</java.mail.version>
