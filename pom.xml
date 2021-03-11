@@ -30,7 +30,6 @@
     </properties>
 
 
-
     <profiles>
         <profile>
             <id>enable-jwebmp</id>
@@ -49,6 +48,15 @@
                 <scope>import</scope>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>tests-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
