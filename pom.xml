@@ -11,7 +11,7 @@
     <artifactId>jwebmp-parent</artifactId>
 
     <packaging>pom</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>JWebMP Parent</name>
     <description>The Parent POM for JWebMP</description>
     <url>https://jwebmp.com</url>
