@@ -20,6 +20,8 @@
     <properties>
         <project.scm.nameUrl>/JWebMP/Parent</project.scm.nameUrl>
         <project.scm.packages>/JWebMP/Packages</project.scm.packages>
+
+        <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
     </properties>
 
     <dependencyManagement>
@@ -118,13 +120,6 @@
             </excludes>
         </resource>
         </resources>
-
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 
 </project>
