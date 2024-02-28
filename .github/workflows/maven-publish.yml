@@ -14,7 +14,7 @@ permissions:
   contents: read
   packages: write
 jobs:
-  JWebMPBom:
+  JWebMPParent:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     with:
       baseDir: ''
