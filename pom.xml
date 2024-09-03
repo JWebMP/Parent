@@ -22,6 +22,7 @@
         <project.scm.packages>/JWebMP/Packages</project.scm.packages>
 
         <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
+        <ignore.moditect>true</ignore.moditect>
     </properties>
 
     <dependencyManagement>
@@ -98,7 +99,7 @@
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
-                    <include>**/*.java</include>
+                   <!-- <include>**/*.java</include>-->
                     <include>**/*.xml</include>
                     <include>**/*.txt</include>
                 </includes>
