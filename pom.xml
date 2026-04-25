@@ -99,28 +99,71 @@
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
-                   <!-- <include>**/*.java</include>-->
+                    <!-- <include>**/*.java</include>-->
                     <include>**/*.xml</include>
                     <include>**/*.txt</include>
                 </includes>
-            </resource><resource>
-            <directory>jar-resources</directory>
-            <targetPath>${project.build.outputDirectory}/META-INF/resources/</targetPath>
-            <excludes>
-                <exclude>**/*.gzip</exclude>
-                <exclude>**/*.md</exclude>
-                <exclude>**/*.md</exclude>
-                <exclude>**/package.json</exclude>
-                <exclude>**/bower.json</exclude>
-                <exclude>**/.bower.json</exclude>
-                <exclude>**/.gitignore</exclude>
-                <exclude>**/.jshint</exclude>
-                <exclude>**/.jshint</exclude>
-                <exclude>**/Gruntfile.js</exclude>
-                <exclude>**/*.sh</exclude>
-            </excludes>
-        </resource>
+            </resource>
+            <resource>
+                <directory>jar-resources</directory>
+                <targetPath>${project.build.outputDirectory}/META-INF/resources/</targetPath>
+                <excludes>
+                    <exclude>**/*.gzip</exclude>
+                    <exclude>**/*.md</exclude>
+                    <exclude>**/*.md</exclude>
+                    <exclude>**/package.json</exclude>
+                    <exclude>**/bower.json</exclude>
+                    <exclude>**/.bower.json</exclude>
+                    <exclude>**/.gitignore</exclude>
+                    <exclude>**/.jshint</exclude>
+                    <exclude>**/.jshint</exclude>
+                    <exclude>**/Gruntfile.js</exclude>
+                    <exclude>**/*.sh</exclude>
+                </excludes>
+            </resource>
         </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven.javadoc.version}</version>
+                    <executions>
+                        <execution>
+                            <id>javadoc</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                            <configuration>
+                                <detectJavaApiLink>true</detectJavaApiLink>
+                                <offlineLinks>
+                                    <offlineLink>
+                                        <!--suppress UnresolvedMavenProperty -->
+                                        <url>https://docs.oracle.com/javase/${jdk.release}/docs/api/</url>
+                                        <location>${project.basedir}</location>
+                                    </offlineLink>
+                                </offlineLinks>
+                                <failOnError>true</failOnError>
+                                <additionalOptions>
+                                    <additionalOption>-Xdoclint:none</additionalOption>
+                                </additionalOptions>
+                                <sourcepath>target/source-output/:src/main/java:src/jre11/java</sourcepath>
+                                <verbose>false</verbose>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>
