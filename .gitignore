@@ -1,26 +1,2 @@
-/build/
-/dist/
-Thumbs.db
-nbproject/build-native.xml~
-javadoc.zip
-persistence.xml
-/javadoc/
-/.jacocoverage/
-/build
-/target/
-/out/
-/**/.sonar/
-**.jacocoverage/
-**/*.iml
-*.iml
-*.versionsBackup
-*.log
-*.tlog
-/.idea/
-*.project
-**/*.project
-**/*.classpath
-**/.settings
-/.settings
-**/*.versionsBackup
-/flatter.pom
+﻿# This file intentionally left mostly empty.
+# Main .gitignore rules are in the repository root.
