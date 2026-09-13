@@ -34,7 +34,7 @@
         <project.scm.nameUrl>/JWebMP/Parent</project.scm.nameUrl>
         <project.scm.packages>/JWebMP/Packages</project.scm.packages>
 
-        <guicedee.version>2.2.0</guicedee.version>
+        <guicedee.version>2.2.3</guicedee.version>
         <jwebmp.version>2.0.3-SNAPSHOT</jwebmp.version>
         <ignore.moditect>true</ignore.moditect>
     </properties>
